@@ -22,7 +22,7 @@ int	f_min(t_list *stack)
 	int		min;
 
 	m = stack;
-	min = INT32_MAX;
+	min = __INT32_MAX__;
 	while (m)
 	{
 		if (m->index < min)

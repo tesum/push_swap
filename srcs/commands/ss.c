@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tesum <tesum@student.42.fr>                +#+  +:+       +#+        */
+/*   By: demilan <demilan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/17 13:28:56 by demilan           #+#    #+#             */
-/*   Updated: 2021/07/13 20:41:06 by tesum            ###   ########.fr       */
+/*   Created: 2021/05/27 21:55:54 by demilan           #+#    #+#             */
+/*   Updated: 2021/06/10 15:00:34 by demilan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "push_swap.h"
+
+void	ss(t_stacks *stacks, t_commands *commands, int flag)
 {
-	if (c >= 97 && c <= 122)
-	{
-		c = c - 32;
-		return (c);
-	}
-	else if (c >= 65 && c <= 90)
-		return (c);
-	else
-		return (c);
+	if (!stacks->a || !stacks->b)
+		return ;
+	sa(stacks, commands, 0);
+	sb(stacks, commands, 0);
+	if (flag == 1)
+		write(1, "ss\n", 3);
 }
